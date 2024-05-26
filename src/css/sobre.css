@@ -1,0 +1,22 @@
+#container{
+    box-sizing: border-box;
+    border: black 2px solid;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+}
+
+#menu-superior{
+    box-sizing: border-box;
+    border: black 2px solid;
+    height: 20vh;
+    width: 100vw;
+    max-width: 100%;
+    background-color: green;
+}
+
+#menu-opcoes ul li{
+    background-color: white;
+    list-style-type: none;
+    display: inline;
+}
