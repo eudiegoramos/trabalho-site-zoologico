@@ -1,26 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animais</title>
-    <link rel="stylesheet" href="./css/animais.css">
+    <title>Animais - Zoológico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+        header {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+        }
+        nav {
+            background-color: #ff9933;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .animal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            width: 200px;
+        }
+        .animal img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 3px solid #ff6600;
+            transition: filter 0.3s ease, transform 0.3s ease;
+	 }
+        .animal img:hover {
+            filter: brightness(80%);
+            transform: scale(1.1);
+	}
+        .animal p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+        }
+        footer {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.2);
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: auto; 
+        }
+
+        
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-box {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            max-width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <div id="container">
-        <div id="menu-superior">
-            <div id="menu-opcoes">
-                <ul>
-                    <a href="../index.html"><li>Home</li></a>
-                    <a href="./animais.html"><li>Animais</li></a>
-                    <a href="./ingresso.html"><li>Ingresso</li></a>
-                    <a href="./mapa.html"><li>Mapa</li></a>
-                    <a href="./noticias.html"><li>Notícias</li></a>
-                    <a href="./pesquisa.html"><li>Pesquisa</li></a>
-                    <a href="./sobre.html"><li>Sobre</li></a>
-                </ul>
-            </div>
-        </div>
+    <header>
+        <h1>Animais - Zoológico</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Animais</a>
+        <a href="#">Ingresso</a>
+        <a href="#">Mapa</a>
+	<a href="#">Noticias</a>
+        <a href="#">Pesquisa</a>
+	<a href="#">Sobre</a>
+    </nav>
+
+   
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-box" placeholder="Pesquisar animais..." onkeyup="filterAnimals()">
     </div>
+
+    <section id="animalSection">
+        <h2>Nossos Animais:</h2>
+        <div class="animal">
+           
+		<img src="leao.png" alt="Leão">
+	    
+            <p>Leão (Panthera leo) - O rei da selva, conhecido por sua juba majestosa é uma espécie de mamífero carnívoro <br> do gênero Panthera e da família Felidae. A espécie é atualmente encontrada na África<br> subsaariana e na Ásia, com uma única população remanescente em perigo, <br> no Parque Nacional da Floresta de Gir, Gujarat, Índia.</p>
+        </div>
+        <div class="animal">
+            <img src="elef.jpg" alt="Elefante">
+            <p>Elefante - Elefante é o termo genérico e popular pelo qual são denominados os membros da família Elephantidae,<br> um grupo de mamíferos proboscídeos elefantídeos, de grande porte, do qual há três espécies<br> no mundo atual, duas africanas (Loxodonta spp.) e uma asiática (Elephas spp.).<br>  elefantes são animais herbívoros, alimentando-se de ervas, gramíneas, frutas e folhas de árvores.<br> Dado o seu tamanho, um elefante adulto pode ingerir entre 70 a 150 kg de alimentos por dia.</p>
+        </div>
+        <div class="animal">
+            <img src="giraf.jpg" alt="Girafa">
+            <p>Girafa (Giraffa camelopardalis) - "As girafas são mamíferos nativos do continente africano. Algumas das características<br> mais marcantes desses animais é a sua altura e o seu padrão de coloração,<br> com manchas marrons características. São animais herbívoros<br> (só se alimentam de vegetais) que apresentam como um de seus alimentos preferidos as plantas conhecidas como acácias.<br> Geralmente as fêmeas dão à luz um único filhote.".</p>
+        </div>
+        <div class="animal">
+            <img src="mamaco.jpg" alt="Macaco">
+            <p>Macaco - Macaco é um termo de origem africana (provavelmente do banto makako)<br> utilizado como designação comum a todas as espécies de símios ou primatas antropoides. É aplicada restritivamente no Brasil aos cebídeos<br> (ou macacos do Novo Mundo) em geral. No sentido estrito, "macaco" refere-se às espécies<br> de primatas pertencentes ao género Macaca.</p>
+        </div>
+    	 <div class="animal">
+	    <img src="jacare.jpg" alt="Jacaré">
+	    <p>Jacaré - Jacarés, também chamados aligátors, são crocodilianos da família Alligatoridae<br>, semelhantes aos crocodilos, dos quais se distinguem pela cabeça mais curta e larga, pela presença de membranas<br> interdigitais (semelhante barbatana) nos polegares das patas traseiras e, com relação à <br>dentição onde o quarto dente canino da mandíbula inferior encaixa em um furo da mandíbula superior<br>, enquanto que nos crocodilos sobressai para fora, quando têm a boca fechada.</p>
+	</section>
+
+    <footer>
+        <p>© 2024 UniZoo. Todos os direitos reservados.</p>
+    </footer>
+    <img src="logo.jpg" alt="Logo da Empresa" class="logo">
+
+    <script>
+        
+        function filterAnimals() {
+            var input, filter, section, animal, p, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            section = document.getElementById('animalSection');
+            animal = section.getElementsByClassName('animal');
+            
+            for (i = 0; i < animal.length; i++) {
+                p = animal[i].getElementsByTagName('p')[0];
+                txtValue = p.textContent || p.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    animal[i].style.display = '';
+                } else {
+                    animal[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
 </body>
 </html>
