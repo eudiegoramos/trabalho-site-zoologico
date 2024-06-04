@@ -20,3 +20,17 @@
     list-style-type: none;
     display: inline;
 }
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: none;
+    float: left;
+}
