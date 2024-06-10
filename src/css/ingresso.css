@@ -20,3 +20,54 @@
     list-style-type: none;
     display: inline;
 }
+.cartao {
+    background-color: #fff;
+    width: 400px;
+    height: 600px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px #aaaa;
+  }
+  .cartao img {
+    width: 400px;
+    height: 230px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .container1{
+    display:flex;
+    justify-content:space-evenly
+  }
+
+  .cartao div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 50%;
+  }
+  .cartao h1 {
+    font-size: 25px;
+  }
+  .cartao p {
+    font-size: 20px;
+    color: black;
+  }
+  .cartao button {
+    background-color: #2192FF;
+    height: 40px;
+    border: none;
+    padding: 4px;
+    width: 80%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+
+
+}
+  .cartao button:hover {
+    background-color: #137de8;
+    cursor: pointer;
+  }
