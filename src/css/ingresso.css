@@ -48,11 +48,12 @@
     height: 50%;
   }
   .cartao h1 {
-    font-size: 25px;
+    font-size: 25px;    
   }
   .cartao p {
     font-size: 20px;
     color: black;
+    padding-left: 8px;
   }
   .cartao button {
     background-color: #2192FF;
