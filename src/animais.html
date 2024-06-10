@@ -10,18 +10,18 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #ffffff;
             position: relative;
         }
         header {
-            background-color: #ff6600;
+            background-color: #ffffff;
             color: #fff;
             padding: 20px;
             text-align: center;
             box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
         }
         nav {
-            background-color: #ff9933;
+            background-color: #ffffff;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -63,7 +63,7 @@
             text-align: center;
         }
         footer {
-            background-color: #ff6600;
+            background-color: #ffffff;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -98,57 +98,60 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="/" class="link-body-emphasis text-decoration-none">
-                <span class="fs-4">UniZoo</span>
-            </a>
+  
+  <div style="z-index: 10;" class="container position-fixed mw-100">
+    <div class="row py-3 mb-4 border-bottom bg-white">
+        <img src="/img/uniZoo_logo2.png" alt="" style="height: 40px; width: auto;" class="col-1 rounded-circle img-fluid float-start">
+        <span class="fs-4 col-4">UniZoo</span>
 
-            <nav>
-                <ul class="nav nav-pills">
-                    <li class="nav-item"><a href="../index.html" class="nav-link" aria-current="page">Home</a></li>
-                    <li class="nav-item"><a href="./animais.html" class="nav-link">Animais</a></li>
-                    <li class="nav-item"><a href="./ingresso.html" class="nav-link">Ingresso</a></li>
-                    <li class="nav-item"><a href="./mapa.html" class="nav-link">Mapa</a></li>
-                    <li class="nav-item"><a href="./noticias.html" class="nav-link">Notícias</a></li>
-                    <li class="nav-item"><a href="./pesquisa.html" class="nav-link">Pesquisa</a></li>
-                    <li class="nav-item"><a href="./sobre.html" class="nav-link active">Sobre</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <ul class="nav nav-pills row col">
+            <li class="nav-item col"><a href="../index.html" class="nav-link text-center" aria-current="page">Home</a></li>
+            <li class="nav-item col"><a href="./animais.html" class="nav-link text-center active">Animais</a></li>
+            <li class="nav-item col"><a href="./ingresso.html" class="nav-link text-center">Ingresso</a></li>
+            <li class="nav-item col"><a href="./mapa.html" class="nav-link text-center">Mapa</a></li>
+            <li class="nav-item col"><a href="./noticias.html" class="nav-link text-center">Notícias</a></li>
+            <li class="nav-item col"><a href="./pesquisa.html" class="nav-link text-center">Pesquisa</a></li>
+            <li class="nav-item col"><a href="./sobre.html" class="nav-link text-center">Sobre</a></li>
+          </ul>
+    </div>
+</div>
+
+<div class="container mw-100">
+    <div class="row py-3 mb-4 border-bottom bg-white">
+        <img src="/img/uniZoo_logo2.png" alt="" style="height: 40px; width: auto;" class="col-1 rounded-circle img-fluid float-start">
+        <span class="fs-4 col-4">UniZoo</span>
 
     
 
     <section id="animalSection">
-        <h2>Nossos Animais:</h2>
+        <h2>Animais Principais:</h2>
         <div class="animal-wrapper">
             <div class="animal">
-                <img src="leao.png" alt="Leão">
+                <img src="/img/leao.png" alt="Leão">
                 <p><b>Leão (Panthera leo) - O rei da selva, conhecido por sua juba majestosa é uma espécie de mamífero carnívoro do gênero Panthera e da família Felidae. A espécie é atualmente encontrada na África subsaariana e na Ásia, com uma única população remanescente em perigo, no Parque Nacional da Floresta de Gir, Gujarat, Índia.</b></p>
             </div>
         </div>
         <div class="animal-wrapper">
             <div class="animal">
-                <img src="elef.jpg" alt="Elefante">
+                <img src="/img/elef.jpg" alt="Elefante">
                 <p><b>Elefante - Elefante é o termo genérico e popular pelo qual são denominados os membros da família Elephantidae, um grupo de mamíferos proboscídeos elefantídeos, de grande porte, do qual há três espécies no mundo atual, duas africanas (Loxodonta spp.) e uma asiática (Elephas spp.). Elefantes são animais herbívoros, alimentando-se de ervas, gramíneas, frutas e folhas de árvores. Dado o seu tamanho, um elefante adulto pode ingerir entre 70 a 150 kg de alimentos por dia.</b></p>
             </div>
         </div>
         <div class="animal-wrapper">
             <div class="animal">
-                <img src="giraf.jpg" alt="Girafa">
+                <img src="/img/giraf.jpg" alt="Girafa">
                 <p><b>Girafa (Giraffa camelopardalis) - "As girafas são mamíferos nativos do continente africano. Algumas das características mais marcantes desses animais é a sua altura e o seu padrão de coloração, com manchas marrons características. São animais herbívoros (só se alimentam de vegetais) que apresentam como um de seus alimentos preferidos as plantas conhecidas como acácias. Geralmente as fêmeas dão à luz um único filhote.".</b></p>
             </div>
         </div>
         <div class="animal-wrapper">
             <div class="animal">
-                <img src="mamaco.jpg" alt="Macaco">
+                <img src="/img/mamaco.jpg" alt="Macaco">
                 <p><b>Macaco - Macaco é um termo de origem africana (provavelmente do banto makako) utilizado como designação comum a todas as espécies de símios ou primatas antropoides. É aplicada restritivamente no Brasil aos cebídeos (ou macacos do Novo Mundo) em geral. No sentido estrito, "macaco" refere-se às espécies de primatas pertencentes ao género Macaca.</b></p>
             </div>
         </div>
         <div class="animal-wrapper">
             <div class="animal">
-                <img src="jacare.jpg" alt="Jacaré">
+                <img src="/img/jacare.jpg" alt="Jacaré">
                 <p><b>Jacaré - Jacarés, também chamados aligátors, são crocodilianos da família Alligatoridae, semelhantes aos crocodilos, dos quais se distinguem pela cabeça mais curta e larga, pela presença de membranas interdigitais (semelhante barbatana) nos polegares das patas traseiras e, com relação à dentição onde o quarto dente canino da mandíbula inferior encaixa em um furo da mandíbula superior, enquanto que nos crocodilos sobressai para fora, quando têm a boca fechada.</b></p>
             </div>
         </div>
