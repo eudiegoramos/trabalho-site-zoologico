@@ -10,18 +10,18 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
+            background-color: #ffedde;
             position: relative;
         }
         header {
-            background-color: #ffffff;
-            color: #fff;
+            background-color: #ffedde;
+            color: #000000;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+           ;
         }
         nav {
-            background-color: #ffffff;
+            background-color: #ffedde;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -36,26 +36,15 @@
         section {
             padding: 20px;
             margin: 20px;
-            background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
         }
-        .animal img {
-            width: 100%; 
-            max-width: 200px; 
-            height: auto; 
-            border-radius: 50%;
-            border: 3px solid #ff6600;
-            transition: filter 0.3s ease, transform 0.3s ease;
-        }
-        
-        .animal img:hover {
-            filter: brightness(80%);
-            transform: scale(1.05);
-        }
+       
+       
+       
         .animal p {
             margin-top: 10px;
             font-size: 16px;
@@ -72,113 +61,147 @@
             width: 100%;
             box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.2);
         }
-        .logo {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 100px;
-            height: 90px; 
-        }
-
         
-    
+        
+    	h1{
+   		font-size: 75px;
+		font-family: font-family: "Times New Roman", Times, serif;
+	}
+	.images-container {
+    		display: flex;
+    		justify-content: center; 
+    		margin-top: 20px;
+    		gap: 15px; 
+	}
 
-        .animal-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 10px;
-            width: 30%; 
-            max-width: 200px; 
-            border: 2px solid #ff6600;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2);
-        }
-    </style>
+	.centered-image {
+   		 width: 300px;
+   		 height: 300px;
+    		object-fit: cover;
+   		 border-radius: 15px;
+   		 transition: transform 0.3s ease, filter 0.3s ease; 
+    		filter: brightness(100%); 
+    		position: relative; 
+}
+
+	.centered-image:hover {
+   		transform: scale(1.02); 
+    		filter: brightness(30%); 
+}
+
+	.image-description {
+    		position: absolute; 
+    		top: 0; 
+    		left: 50%; 
+    		transform: translateX(-50%); 
+    		width: 100%; 
+   		     text-align: center; 
+    		background-color: rgba(0, 0, 0, 0.7); 
+    		color: #fff;
+   		     padding: 5px 10px; 
+    		border-radius: 5px;
+   		     font-size: 14px;
+   		     opacity: 0; 
+   		     transition: opacity 0.3s ease; 
+}
+
+	.centered-image:hover .image-description {
+   		 opacity: 5; 
+}
+
+
+
+</style>
 </head>
 <body>
   
-    <div style="z-index: 10;" class="container-fluid position-fixed">
-        <div class="row py-3 mb-4 border-bottom bg-white">
-            <img src="/img/uniZoo_logo2.png" alt="" style="height: 40px; width: auto;" class="col-1 rounded-circle img-fluid float-start">
-            <span class="fs-4 col-4">UniZoo</span>
-
-            <ul class="nav nav-pills row col">
-                <li class="nav-item col"><a href="../index.html" class="nav-link text-center" aria-current="page">Home</a></li>
-                <li class="nav-item col"><a href="./animais.html" class="nav-link active text-center">Animais</a></li>
-                <li class="nav-item col"><a href="./ingresso.html" class="nav-link text-center">Ingresso</a></li>
-                <li class="nav-item col"><a href="./mapa.html" class="nav-link text-center">Mapa</a></li>
-                <li class="nav-item col"><a href="./noticias.html" class="nav-link text-center">Notícias</a></li>
-                <li class="nav-item col"><a href="./pesquisa.html" class="nav-link text-center">Pesquisa</a></li>
-                <li class="nav-item col"><a href="./sobre.html" class="nav-link text-center">Sobre</a></li>
-              </ul>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row py-3 mb-4 border-bottom bg-white">
-            <img src="/img/uniZoo_logo2.png" alt="" style="height: 40px; width: auto;" class="col-1 rounded-circle img-fluid float-start">
-            <span class="fs-4 col-4">UniZoo</span>
-
-            <ul class="nav nav-pills row col">
-                <li class="nav-item col"><a href="../index.html" class="nav-link text-center" aria-current="page">Home</a></li>
-                <li class="nav-item col"><a href="./animais.html" class="nav-link text-center">Animais</a></li>
-                <li class="nav-item col"><a href="./ingresso.html" class="nav-link text-center">Ingresso</a></li>
-                <li class="nav-item col"><a href="./mapa.html" class="nav-link text-center">Mapa</a></li>
-                <li class="nav-item col"><a href="./noticias.html" class="nav-link text-center">Notícias</a></li>
-                <li class="nav-item col"><a href="./pesquisa.html" class="nav-link active text-center">Pesquisa</a></li>
-                <li class="nav-item col"><a href="./sobre.html" class="nav-link text-center">Sobre</a></li>
-              </ul>
-        </div>
-    </div>
-
-<div class="container mw-100">
+<div style="z-index: 10;" class="container position-fixed mw-100">
     <div class="row py-3 mb-4 border-bottom bg-white">
-     
+        <img src="/img/uniZoo_logo2.png" alt="" style="height: 40px; width: auto;" class="col-1 rounded-circle img-fluid float-start">
+        <span class="fs-4 col-4">UniZoo</span>
+        <ul class="nav nav-pills row col">
+            <li class="nav-item col"><a href="../index.html" class="nav-link text-center" aria-current="page">Home</a></li>
+            <li class="nav-item col"><a href="./animais.html" class="nav-link text-center active">Animais</a></li>
+            <li class="nav-item col"><a href="./ingresso.html" class="nav-link text-center">Ingresso</a></li>
+            <li class="nav-item col"><a href="./mapa.html" class="nav-link text-center">Mapa</a></li>
+            <li class="nav-item col"><a href="./noticias.html" class="nav-link text-center">Notícias</a></li>
+            <li class="nav-item col"><a href="./pesquisa.html" class="nav-link text-center">Pesquisa</a></li>
+            <li class="nav-item col"><a href="./sobre.html" class="nav-link text-center">Sobre</a></li>
+        </ul>
+    </div>
+</div>
+<header><br><br><br><br><br><br>
+    <h1><font  color="4a9b55" ><b>A BICHARADA TÁ<b></font></h1>
+	<h1><font color="4a9b55" ><b>NO UNIZOO!<b></font></h1>
+	<br><br>
+<div class="images-container">
+        <div class="centered-image">
+	  <img src="jacaree.webp" alt="Descrição da imagem 1" class="centered-image">
+	<div class="image-description">Jacaré, também chamado aligátor, são crocodilianos da família Alligatoridae, semelhantes 
+aos crocodilos, dos quais se distinguem pela cabeça mais curta e larga, pela presença de membranas interdigitais (semelhante barbatana) 
+nos polegares das patas traseiras e, com relação à dentição onde o quarto dente canino da mandíbula inferior encaixa em um furo da mandíbula 
+superior, enquanto que nos crocodilos sobressai para fora, quando têm a boca fechada.</div></div>
+        <div class="centered-image">
+	  <img src="elefantemesmo.jpg" alt="Descrição da imagem 2" class="centered-image">
+	<div class="image-description">Elefante é o termo genérico e popular pelo qual são denominados os membros da família Elephantidae, um 
+grupo de mamíferos proboscídeos elefantídeos, de grande porte, do qual há três espécies no mundo atual, duas africanas (Loxodonta spp.) e uma 
+asiática (Elephas spp.). Há ainda os mamutes (Mammuthus spp.), hoje extintos. Até recentemente, acreditava-se que havia apenas duas espécies vivas 
+de elefantes, o elefante-africano e o elefante-asiático, uma espécie menor.</div></div>
+        <div class="centered-image">
+	  <img src="monkey.jpg" alt="Descrição da imagem 3" class="centered-image">
+	<div class="image-description">Macaco é um termo de origem africana (provavelmente do banto makako) utilizado como designação comum a todas as 
+espécies de símios ou primatas antropoides. É aplicada restritivamente no Brasil aos cebídeos (ou macacos do Novo Mundo) em geral. No sentido 
+estrito, "macaco" refere-se às espécies de primatas pertencentes ao género Macaca.</div></div>
+	
+    </div>
+<div class="images-container">
+	<div class="centered-image">
+          <img src="owl.jpg" alt="Descrição da imagem 1" class="centered-image">
+	<div class="image-description">Corujas são aves que apresentam cabeça grande, rosto achatado, grandes olhos e bico forte e curvado.
+ São animais, em sua maioria, noturnos e bem adaptados a viver na escuridão, sendo capazes, por exemplo, de capturar suas presas mesmo 
+contando apenas com a luminosidade garantida pela Lua. Graças aos hábitos noturnos, as corujas são conhecidas também como “rainhas da noite”.</div></div>
+        <div class="centered-image">
+	  <img src="cheetah.jpeg" alt="Descrição da imagem 2" class="centered-image">
+	<div class="image-description">Os linces são felinos de dimensões um pouco maiores que o gato doméstico, podendo pesar até 
+30 kg, encontrando-se em geral entre os 12 kg e 20 kg, e têm um comprimento que oscila geralmente entre os 80 e 110 centímetros. 
+São felinos de porte médio, costumando ser menores do que as panteras (leões, tigres, leopardos e jaguares) e pumas mas maiores do que os 
+demais gatos selvagens que vivem em seu habitat. Têm cauda curta e orelhas bicudas, com um tufo de pelos na ponta.</div></div>
+        <div class="centered-image">
+	  <img src="giraffa.jpeg" alt="Descrição da imagem 3" class="centered-image">
+	<div class="image-description">O termo girafa (do árabe zarAfa(t), pelo italiano giraffa) é a designação dada a mamíferos 
+artiodátilos, ruminantes, do gênero Giraffa, da família dos girafídeos, no qual constam quatro espécies (até 2016 considerava-se uma única 
+espécie, a Giraffa camelopardalis, ou camelo-leopardo, como eram chamadas pelos romanos quando elas existiam no norte da África, pois acreditava-se 
+que vinham de uma mistura de uma fêmea camelo, com um macho leopardo)[carece de fontes]. São ungulados com número par de dedos.</div></div>
+</div>
+<div class="images-container">
+        <div class="centered-image">
+	  <img src="leaoo.jpg" alt="Descrição da imagem 1" class="centered-image">
+          <div class="image-description">O leão [feminino: leoa] (nome científico: Panthera leo) é uma espécie de mamífero
+ carnívoro do gênero Panthera e da família Felidae. A espécie é atualmente encontrada na África subsaariana e na
+ Ásia, com uma única população remanescente em perigo, no Parque Nacional da Floresta de Gir, Gujarat, Índia.</div></div>
+	
+	<div class="centered-image">
+	  <img src="bear.png" alt="Descrição da imagem 2" class="centered-image">
+	<div class="image-description">Os Ursos (latim científico: Ursidae) constituem uma família de mamíferos carnívoros de 
+grande porte, contendo os ursos e os pandas. Eles são classificados como caníformes ou carnivoros caninos. Os ursos são encontrados
+nos continentes da América do Norte, América do Sul, Europa e Ásia. As características comuns dos ursos modernos incluem 
+corpos grandes com pernas atarracadas, focinhos longos, orelhas pequenas e arredondadas, cabelos desgrenhados, patas plantígradas 
+com cinco garras não retráteis e caudas curtas.</div></div>
+	<div class="centered-image">
+	  <img src="tigre.jpg" alt="Descrição da imagem 3" class="centered-image">
+	<div class="image-description">O tigre [feminino: tigresa] (nome científico: Panthera tigris) é um mamífero carnívoro da 
+família dos felídeos, que habita o continente asiático. Dentre suas subespécies é o maior entre todos os felinos selvagens do mundo. 
+São animais extremamente territoriais e solitários. Classificado como um superpredador em seu ecossistema respectivo, o tigre é tido 
+como o terceiro maior carnívoro terrestre da contemporaneidade, excedido em porte unicamente pelo urso-polar e pelo urso-pardo.</div></div>
+</div>
+</header>
+<br><br><br>
+<footer>
+    <div class="container">
+        <p class="text-body-secondary">&copy; 2024 UniZoo</p>
+    </div>
+</footer>
 
-    
-
-    <section id="animalSection">
-        <h2>Animais Principais:</h2>
-        <div class="animal-wrapper">
-            <div class="animal">
-                <img src="/img/leao.png" alt="Leão">
-                <p><b>Leão (Panthera leo) - O rei da selva, conhecido por sua juba majestosa é uma espécie de mamífero carnívoro do gênero Panthera e da família Felidae. A espécie é atualmente encontrada na África subsaariana e na Ásia, com uma única população remanescente em perigo, no Parque Nacional da Floresta de Gir, Gujarat, Índia.</b></p>
-            </div>
-        </div>
-        <div class="animal-wrapper">
-            <div class="animal">
-                <img src="/img/elef.jpg" alt="Elefante">
-                <p><b>Elefante - Elefante é o termo genérico e popular pelo qual são denominados os membros da família Elephantidae, um grupo de mamíferos proboscídeos elefantídeos, de grande porte, do qual há três espécies no mundo atual, duas africanas (Loxodonta spp.) e uma asiática (Elephas spp.). Elefantes são animais herbívoros, alimentando-se de ervas, gramíneas, frutas e folhas de árvores. Dado o seu tamanho, um elefante adulto pode ingerir entre 70 a 150 kg de alimentos por dia.</b></p>
-            </div>
-        </div>
-        <div class="animal-wrapper">
-            <div class="animal">
-                <img src="/img/giraf.jpg" alt="Girafa">
-                <p><b>Girafa (Giraffa camelopardalis) - "As girafas são mamíferos nativos do continente africano. Algumas das características mais marcantes desses animais é a sua altura e o seu padrão de coloração, com manchas marrons características. São animais herbívoros (só se alimentam de vegetais) que apresentam como um de seus alimentos preferidos as plantas conhecidas como acácias. Geralmente as fêmeas dão à luz um único filhote.".</b></p>
-            </div>
-        </div>
-        <div class="animal-wrapper">
-            <div class="animal">
-                <img src="/img/mamaco.jpg" alt="Macaco">
-                <p><b>Macaco - Macaco é um termo de origem africana (provavelmente do banto makako) utilizado como designação comum a todas as espécies de símios ou primatas antropoides. É aplicada restritivamente no Brasil aos cebídeos (ou macacos do Novo Mundo) em geral. No sentido estrito, "macaco" refere-se às espécies de primatas pertencentes ao género Macaca.</b></p>
-            </div>
-        </div>
-        <div class="animal-wrapper">
-            <div class="animal">
-                <img src="/img/jacare.jpg" alt="Jacaré">
-                <p><b>Jacaré - Jacarés, também chamados aligátors, são crocodilianos da família Alligatoridae, semelhantes aos crocodilos, dos quais se distinguem pela cabeça mais curta e larga, pela presença de membranas interdigitais (semelhante barbatana) nos polegares das patas traseiras e, com relação à dentição onde o quarto dente canino da mandíbula inferior encaixa em um furo da mandíbula superior, enquanto que nos crocodilos sobressai para fora, quando têm a boca fechada.</b></p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p class="text-body-secondary">&copy; 2024 UniZoo</p>
-        </div>
-    </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
