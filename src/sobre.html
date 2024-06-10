@@ -7,43 +7,84 @@
     <link rel="stylesheet" href="css/css-bootstrap/bootstrap.css">
 </head>
 <body>
-    <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-            <span class="fs-4">UniZoo</span>
-          </a>
-    
-          <ul class="nav nav-pills">
-            <li class="nav-item"><a href="../index.html" class="nav-link" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="./animais.html" class="nav-link">Animais</a></li>
-            <li class="nav-item"><a href="./ingresso.html" class="nav-link">Ingresso</a></li>
-            <li class="nav-item"><a href="./mapa.html" class="nav-link">Mapa</a></li>
-            <li class="nav-item"><a href="./noticias.html" class="nav-link">Notícias</a></li>
-            <li class="nav-item"><a href="./pesquisa.html" class="nav-link">Pesquisa</a></li>
-            <li class="nav-item"><a href="./sobre.html" class="nav-link active">Sobre</a></li>
+  <div style="z-index: 10;" class="container position-fixed mw-100">
+    <div class="row py-3 mb-4 border-bottom bg-white">
+        <img src="/img/uniZoo_logo2.png" alt="" style="height: 40px; width: auto;" class="col-1 rounded-circle img-fluid float-start">
+        <span class="fs-4 col-4">UniZoo</span>
+
+        <ul class="nav nav-pills row col">
+            <li class="nav-item col"><a href="../index.html" class="nav-link text-center" aria-current="page">Home</a></li>
+            <li class="nav-item col"><a href="./animais.html" class="nav-link text-center">Animais</a></li>
+            <li class="nav-item col"><a href="./ingresso.html" class="nav-link text-center">Ingresso</a></li>
+            <li class="nav-item col"><a href="./mapa.html" class="nav-link text-center">Mapa</a></li>
+            <li class="nav-item col"><a href="./noticias.html" class="nav-link text-center">Notícias</a></li>
+            <li class="nav-item col"><a href="./pesquisa.html" class="nav-link text-center">Pesquisa</a></li>
+            <li class="nav-item col"><a href="./sobre.html" class="nav-link text-center active">Sobre</a></li>
           </ul>
-        </header>
+    </div>
+</div>
+
+<div class="container mw-100">
+    <div class="row py-3 mb-4 border-bottom bg-white">
+        <img src="/img/uniZoo_logo2.png" alt="" style="height: 40px; width: auto;" class="col-1 rounded-circle img-fluid float-start">
+        <span class="fs-4 col-4">UniZoo</span>
+
+        <ul class="nav nav-pills row col">
+            <li class="nav-item col"><a href="../index.html" class="nav-link text-center" aria-current="page">Home</a></li>
+            <li class="nav-item col"><a href="./animais.html" class="nav-link text-center">Animais</a></li>
+            <li class="nav-item col"><a href="./ingresso.html" class="nav-link text-center">Ingresso</a></li>
+            <li class="nav-item col"><a href="./mapa.html" class="nav-link text-center">Mapa</a></li>
+            <li class="nav-item col"><a href="./noticias.html" class="nav-link text-center">Notícias</a></li>
+            <li class="nav-item col"><a href="./pesquisa.html" class="nav-link text-center">Pesquisa</a></li>
+            <li class="nav-item col"><a href="./sobre.html" class="nav-link text-center active">Sobre</a></li>
+          </ul>
+    </div>
+</div>
+    <br>
+    <br>
+    <br>
+
+    <form class="border border-light-subtle border-3">
+      <br>
+      <p class="col-sm-2 offset-5">Receba as novidades do UniZoo:</p>
+      <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-1 col-form-label offset-4">Email</label>
+        <div class="col-sm-4">
+          <input type="email" class="form-control" id="inputEmail3">
+        </div>
       </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-1 col-form-label offset-4">Celular</label>
+        <div class="col-sm-4">
+          <input type="tel" class="form-control" id="inputPassword3">
+        </div>
+      </div>
+      <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0 offset-4">Aceito receber:</legend>
+        <div class="col-sm-4">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios1" value="option1">
+            <label class="form-check-label" for="gridRadios1">
+              Ofertas e anúncios
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+              Novidades do UniZoo
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn btn-primary col-sm-2 offset-5">Enviar</button>
+      <br>
+      <br>
+    </form>
+
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
+
       <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
           <p class="col-md-4 mb-0 text-body-secondary">&copy; 2024 UniZoo</p>
@@ -54,12 +95,6 @@
       
           <ul class="nav col-md-4 justify-content-end">
             <li class="nav-item"><a href="../index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="./animais.html" class="nav-link px-2 text-body-secondary">Animais</a></li>
-            <li class="nav-item"><a href="./ingresso.html" class="nav-link px-2 text-body-secondary">Ingresso</a></li>
-            <li class="nav-item"><a href="./mapa.html" class="nav-link px-2 text-body-secondary">Mapa</a></li>
-            <li class="nav-item"><a href="./noticias.html" class="nav-link px-2 text-body-secondary">Notícias</a></li>
-            <li class="nav-item"><a href="./pesquisa.html" class="nav-link px-2 text-body-secondary">Pesquisa</a></li>
-            <li class="nav-item"><a href="./sobre.html" class="nav-link px-2 text-body-secondary">Sobre</a></li>
           </ul>
         </footer>
       </div>
