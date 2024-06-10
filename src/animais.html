@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animais - UniZoo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #ffffff;
             position: relative;
         }
         header {
-            background-color: #ff6600;
+            background-color: #ffffff;
             color: #fff;
             padding: 20px;
             text-align: center;
             box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
         }
         nav {
-            background-color: #ff9933;
+            background-color: #ffffff;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -43,24 +43,19 @@
             flex-wrap: wrap;
             justify-content: space-around;
         }
-        .animal {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 10px;
-            width: 200px;
-        }
         .animal img {
-            width: 200px;
-            height: 200px;
+            width: 100%; 
+            max-width: 200px; 
+            height: auto; 
             border-radius: 50%;
             border: 3px solid #ff6600;
             transition: filter 0.3s ease, transform 0.3s ease;
-	 }
+        }
+        
         .animal img:hover {
             filter: brightness(80%);
             transform: scale(1.05);
-	}
+        }
         .animal p {
             margin-top: 10px;
             font-size: 16px;
@@ -68,7 +63,7 @@
             text-align: center;
         }
         footer {
-            background-color: #ff6600;
+            background-color: #ffffff;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -86,115 +81,88 @@
         }
 
         
-        .search-container {
-            text-align: center;
-            margin-bottom: 20px;
-	    
-        
-	}
-        .search-box {
-            padding: 10px;
-            border: 1px solid #ccc;
+    
+
+        .animal-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            width: 30%; 
+            max-width: 200px; 
+            border: 2px solid #ff6600;
             border-radius: 10px;
-            width: 300px;
-            max-width: 100%;
-            box-sizing: border-box;
-            font-size: 16px;
+            padding: 15px;
+            box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2);
         }
-
-	.animal-wrapper {
-    	    display: flex;
-    	    flex-direction: column;
-    	    align-items: center;
-    	    margin: 10px;
-    	    width: 200px;
-    	    border: 2px solid #ff6600; 
-    	    border-radius: 10px; 
-    	    padding: 15px; 
-    	    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2); 
-	}
-
     </style>
 </head>
 <body>
-    <header>
-        <h1>Animais - UniZoo</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#">Animais</a>
-        <a href="#">Ingresso</a>
-        <a href="#">Mapa</a>
-	<a href="#">Noticias</a>
-        <a href="#">Pesquisa</a>
-	<a href="#">Sobre</a>
-    </nav>
+  
+  <div style="z-index: 10;" class="container position-fixed mw-100">
+    <div class="row py-3 mb-4 border-bottom bg-white">
+        <img src="/img/uniZoo_logo2.png" alt="" style="height: 40px; width: auto;" class="col-1 rounded-circle img-fluid float-start">
+        <span class="fs-4 col-4">UniZoo</span>
 
-   
-    <div class="search-container">
-        <input type="text" id="searchInput" class="search-box" placeholder="Pesquisar animais..." onkeyup="filterAnimals()">
+        <ul class="nav nav-pills row col">
+            <li class="nav-item col"><a href="../index.html" class="nav-link text-center" aria-current="page">Home</a></li>
+            <li class="nav-item col"><a href="./animais.html" class="nav-link text-center active">Animais</a></li>
+            <li class="nav-item col"><a href="./ingresso.html" class="nav-link text-center">Ingresso</a></li>
+            <li class="nav-item col"><a href="./mapa.html" class="nav-link text-center">Mapa</a></li>
+            <li class="nav-item col"><a href="./noticias.html" class="nav-link text-center">Notícias</a></li>
+            <li class="nav-item col"><a href="./pesquisa.html" class="nav-link text-center">Pesquisa</a></li>
+            <li class="nav-item col"><a href="./sobre.html" class="nav-link text-center">Sobre</a></li>
+          </ul>
     </div>
+</div>
+
+<div class="container mw-100">
+    <div class="row py-3 mb-4 border-bottom bg-white">
+        <img src="/img/uniZoo_logo2.png" alt="" style="height: 40px; width: auto;" class="col-1 rounded-circle img-fluid float-start">
+        <span class="fs-4 col-4">UniZoo</span>
+
+    
 
     <section id="animalSection">
-        <h2>Nossos Animais:</h2>
-          <div class="animal-wrapper">
-	    <div class="animal">
-           
-		<img src="/img/leao.png" alt="Leão">
-	    
-            <p><b> Leão (Panthera leo) - O rei da selva, conhecido por sua juba majestosa é uma espécie de mamífero carnívoro <br> do gênero Panthera e da família Felidae. A espécie é atualmente encontrada na África<br> subsaariana e na Ásia, com uma única população remanescente em perigo, <br> no Parque Nacional da Floresta de Gir, Gujarat, Índia.</b> </p>
+        <h2>Animais Principais:</h2>
+        <div class="animal-wrapper">
+            <div class="animal">
+                <img src="/img/leao.png" alt="Leão">
+                <p><b>Leão (Panthera leo) - O rei da selva, conhecido por sua juba majestosa é uma espécie de mamífero carnívoro do gênero Panthera e da família Felidae. A espécie é atualmente encontrada na África subsaariana e na Ásia, com uma única população remanescente em perigo, no Parque Nacional da Floresta de Gir, Gujarat, Índia.</b></p>
+            </div>
         </div>
-	</div>
-         <div class="animal-wrapper">
-	   <div class="animal">
-            <img src="/img/elef.jpg" alt="Elefante">
-            <p><b> Elefante - Elefante é o termo genérico e popular pelo qual são denominados os membros da família Elephantidae,<br> um grupo de mamíferos proboscídeos elefantídeos, de grande porte, do qual há três espécies<br> no mundo atual, duas africanas (Loxodonta spp.) e uma asiática (Elephas spp.).<br>  elefantes são animais herbívoros, alimentando-se de ervas, gramíneas, frutas e folhas de árvores.<br> Dado o seu tamanho, um elefante adulto pode ingerir entre 70 a 150 kg de alimentos por dia.</b> </p>
+        <div class="animal-wrapper">
+            <div class="animal">
+                <img src="/img/elef.jpg" alt="Elefante">
+                <p><b>Elefante - Elefante é o termo genérico e popular pelo qual são denominados os membros da família Elephantidae, um grupo de mamíferos proboscídeos elefantídeos, de grande porte, do qual há três espécies no mundo atual, duas africanas (Loxodonta spp.) e uma asiática (Elephas spp.). Elefantes são animais herbívoros, alimentando-se de ervas, gramíneas, frutas e folhas de árvores. Dado o seu tamanho, um elefante adulto pode ingerir entre 70 a 150 kg de alimentos por dia.</b></p>
+            </div>
         </div>
-	</div>
-         <div class="animal-wrapper">
-	  <div class="animal">
-            <img src="/img/giraf.jpg" alt="Girafa">
-            <p><b> Girafa (Giraffa camelopardalis) - "As girafas são mamíferos nativos do continente africano. Algumas das características<br> mais marcantes desses animais é a sua altura e o seu padrão de coloração,<br> com manchas marrons características. São animais herbívoros<br> (só se alimentam de vegetais) que apresentam como um de seus alimentos preferidos as plantas conhecidas como acácias.<br> Geralmente as fêmeas dão à luz um único filhote.".</b> </p>
+        <div class="animal-wrapper">
+            <div class="animal">
+                <img src="/img/giraf.jpg" alt="Girafa">
+                <p><b>Girafa (Giraffa camelopardalis) - "As girafas são mamíferos nativos do continente africano. Algumas das características mais marcantes desses animais é a sua altura e o seu padrão de coloração, com manchas marrons características. São animais herbívoros (só se alimentam de vegetais) que apresentam como um de seus alimentos preferidos as plantas conhecidas como acácias. Geralmente as fêmeas dão à luz um único filhote.".</b></p>
+            </div>
         </div>
-	</div>
-        <div class="animal-wrapper">	
-	  <div class="animal">
-            <img src="/img/mamaco.jpg" alt="Macaco">
-            <p><b> Macaco - Macaco é um termo de origem africana (provavelmente do banto makako)<br> utilizado como designação comum a todas as espécies de símios ou primatas antropoides. É aplicada restritivamente no Brasil aos cebídeos<br> (ou macacos do Novo Mundo) em geral. No sentido estrito, "macaco" refere-se às espécies<br> de primatas pertencentes ao género Macaca.</b> </p>
+        <div class="animal-wrapper">
+            <div class="animal">
+                <img src="/img/mamaco.jpg" alt="Macaco">
+                <p><b>Macaco - Macaco é um termo de origem africana (provavelmente do banto makako) utilizado como designação comum a todas as espécies de símios ou primatas antropoides. É aplicada restritivamente no Brasil aos cebídeos (ou macacos do Novo Mundo) em geral. No sentido estrito, "macaco" refere-se às espécies de primatas pertencentes ao género Macaca.</b></p>
+            </div>
         </div>
-	</div>
-    	 <div class="animal-wrapper">
-	  <div class="animal">
-	    <img src="/img/jacare.jpg" alt="Jacaré">
-	    <p><b> Jacaré - Jacarés, também chamados aligátors, são crocodilianos da família Alligatoridae<br>, semelhantes aos crocodilos, dos quais se distinguem pela cabeça mais curta e larga, pela presença de membranas<br> interdigitais (semelhante barbatana) nos polegares das patas traseiras e, com relação à <br>dentição onde o quarto dente canino da mandíbula inferior encaixa em um furo da mandíbula superior<br>, enquanto que nos crocodilos sobressai para fora, quando têm a boca fechada.</b> </p>
-	</div>
-	</div>
-	</section>
+        <div class="animal-wrapper">
+            <div class="animal">
+                <img src="/img/jacare.jpg" alt="Jacaré">
+                <p><b>Jacaré - Jacarés, também chamados aligátors, são crocodilianos da família Alligatoridae, semelhantes aos crocodilos, dos quais se distinguem pela cabeça mais curta e larga, pela presença de membranas interdigitais (semelhante barbatana) nos polegares das patas traseiras e, com relação à dentição onde o quarto dente canino da mandíbula inferior encaixa em um furo da mandíbula superior, enquanto que nos crocodilos sobressai para fora, quando têm a boca fechada.</b></p>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>© 2024 UniZoo. Todos os direitos reservados.</p>
+        <div class="container">
+            <p class="text-body-secondary">&copy; 2024 UniZoo</p>
+        </div>
     </footer>
-    <img src="/img/logo.jpg" alt="Logo da Empresa" class="logo">
 
-   <script>
-    function filterAnimals() {
-        var input, filter, section, animalWrapper, p, i, txtValue;
-        input = document.getElementById('searchInput');
-        filter = input.value.toUpperCase();
-        section = document.getElementById('animalSection');
-        animalWrapper = section.getElementsByClassName('animal-wrapper');
-        
-        for (i = 0; i < animalWrapper.length; i++) {
-            p = animalWrapper[i].getElementsByTagName('p')[0];
-            txtValue = p.textContent || p.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                animalWrapper[i].style.display = '';
-            } else {
-                animalWrapper[i].style.display = 'none';
-            }
-        }
-    }
-</script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
