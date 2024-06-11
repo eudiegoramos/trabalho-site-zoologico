@@ -94,3 +94,12 @@ table th{
   border: 1px solid black;
 }
 
+#celula_verde:hover{
+  background-color: #50df95;
+  cursor: pointer;
+}
+
+#celula_vermelha:hover{
+  background-color: #f06969;
+  cursor: pointer;
+}
