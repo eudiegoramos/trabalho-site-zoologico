@@ -72,3 +72,24 @@
     background-color: #137de8;
     cursor: pointer;
   }
+h2{
+  text-align: center;
+  font-family: sans-serif;
+}
+
+table{
+  box-shadow: 4px, 4px, 12px #aaaa;
+  display: flex;
+  justify-content: center;
+  border-collapse: collapse;
+}
+table tr td{ 
+  border: 1px solid black;
+  padding: px;
+}
+
+table th{
+  background-color:#2192FF;
+  color: #fff;
+  border: 1px solid black;
+}
